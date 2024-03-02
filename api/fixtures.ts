@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import config from './config';
+import Item from './models/./Item';
 import Category from './models/Category';
 import User from './models/User';
 
@@ -52,6 +53,38 @@ const run = async () => {
         },
     );
 
+    await Item.create(
+        {
+            user: user1._id,
+            category: category1._id,
+            title: 'title 1',
+            description: "text1",
+            image: 'fixtures/test-image.jpg',
+            price: 500,
+        }, {
+            user: user1._id,
+            category: category2._id,
+            title: 'title 2',
+            description: "text1",
+            image: 'fixtures/test-image.jpg',
+            price: 500,
+        },
+        {
+            user: user2._id,
+            category: category3._id,
+            title: 'title 3',
+            description: "text1",
+            image: 'fixtures/test-image.jpg',
+            price: 500,
+        }, {
+            user: user2._id,
+            category: category3._id,
+            title: 'title 4',
+            description: "text1",
+            image: 'fixtures/test-image.jpg',
+            price: 500,
+        },
+    );
     await db.close();
 };
 

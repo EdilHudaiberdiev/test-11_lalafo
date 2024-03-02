@@ -6,6 +6,36 @@ export interface User {
   token: string;
 }
 
+export interface IItem {
+  _id: string;
+  title: string;
+  description: string;
+  image: string | null;
+  user: User;
+  price: number;
+}
+
+export interface ICategory {
+  _id: string;
+  title: string;
+}
+
+export interface IItem {
+  title: string;
+  description: string;
+  image: string | null;
+  price: number;
+  category: string;
+}
+
+export interface IItemForm {
+  title: string;
+  description: string;
+  image: string | null;
+  price: number;
+  category: string;
+}
+
 export interface RegisterMutation {
   username: string;
   displayName: string;
@@ -13,15 +43,12 @@ export interface RegisterMutation {
   password: string;
 }
 
+
 export interface RegisterResponse {
   user: User;
   message: string;
 }
 
-export interface ICategory {
-  _id: string;
-  title: string;
-}
 export interface ValidationError {
   errors: {
     [key: string]: {
@@ -42,3 +69,4 @@ export interface LoginMutation {
 export interface GlobalError {
   error: string;
 }
+
