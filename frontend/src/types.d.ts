@@ -18,6 +18,10 @@ export interface RegisterResponse {
   message: string;
 }
 
+export interface ICategory {
+  _id: string;
+  title: string;
+}
 export interface ValidationError {
   errors: {
     [key: string]: {
