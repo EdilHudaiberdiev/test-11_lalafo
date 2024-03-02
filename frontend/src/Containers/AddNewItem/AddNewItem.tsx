@@ -123,8 +123,6 @@ const AddNewItem = () => {
             />
           </div>
 
-
-
           <div className="mb-3">
             <label htmlFor="category">
               <span>Category:</span>
@@ -145,7 +143,6 @@ const AddNewItem = () => {
               label="Image"
             />
           </div>
-
 
           <button type="submit" className="btn btn-primary">Create</button>
         </form>

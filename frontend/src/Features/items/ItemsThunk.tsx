@@ -27,7 +27,7 @@ export const getItemsByCategory = createAsyncThunk(
 export const deleteItemById = createAsyncThunk(
   'items/delete-by-id',
   async (item_id: string, thunkAPI) => {
-    let state = thunkAPI.getState() as RootState;
+    const state = thunkAPI.getState() as RootState;
     if (state?.users?.user?.token) {
       await axiosApi.delete(`items/${item_id}`, {headers: {'Authorization': state.users.user.token}});
     }
@@ -36,7 +36,7 @@ export const deleteItemById = createAsyncThunk(
 export const addItem = createAsyncThunk(
   'items/add',
   async (item: FormData, thunkAPI) => {
-    let state = thunkAPI.getState() as RootState;
+    const state = thunkAPI.getState() as RootState;
     if (state?.users?.user?.token) {
       await axiosApi.post(`items`, item, {headers: {'Authorization': state.users.user.token}} );
     }

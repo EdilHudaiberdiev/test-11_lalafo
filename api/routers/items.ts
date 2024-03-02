@@ -13,6 +13,7 @@ itemRouter.post('/', auth, imagesUpload.single('image'), async (req: RequestWith
             user: req.user?._id,
             title: req.body.title,
             description: req.body.description,
+            category: req.body.category,
             price: req.body.price,
             image: req.file ? req.file.filename : null,
         });

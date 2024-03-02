@@ -71,10 +71,10 @@ const Register = () => {
               <TextField
                 required
                 label="User"
-                name="user"
+                name="username"
                 value={state.username}
-                error={Boolean(getFieldError('user'))}
-                helperText={getFieldError('user')}
+                error={Boolean(getFieldError('username'))}
+                helperText={getFieldError('username')}
                 onChange={inputChangeHandler}
                 autoComplete="new-user"
               />

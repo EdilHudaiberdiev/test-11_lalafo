@@ -10,7 +10,6 @@ const ItemsListBlock = () => {
   const items = useAppSelector(selectItems);
   const itemsLoading = useAppSelector(selectItemsLoading);
 
-  console.log(items);
   return (
     <>
       {itemsLoading.get ? <Spinner/> :
